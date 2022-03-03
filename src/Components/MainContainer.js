@@ -23,6 +23,20 @@ function MainContainer() {
             </div>
            </div>
          </div>
+         <div className="cards">
+           <div className="filters">
+             <div className="popular">
+               <h2>Feed</h2>
+               <a href="#" className="button2">Popular</a>
+             </div>
+             <div className="filter_buttons">
+               <a href="#" className="button1">All</a>
+               <a href="#" className="button2">Illustration</a>
+               <a href="#" className="button2">Art</a>
+               <a href="#" className="button2">Games</a>
+             </div>
+           </div>
+         </div>
        </div>
        <div className="right"></div>
     </div>
