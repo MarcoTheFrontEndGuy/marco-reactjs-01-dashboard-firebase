@@ -17,3 +17,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.button1 {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  background-image: linear-gradient(#ff21bc, #b21783);
+  padding: 5px 15px;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  box-shadow: inset 2px 2px 2px rgba(255,255,255,0.4), 
+  inset -5px -10px 10px #b1147b;
+  margin-right: 10px;
+  cursor: pointer;
+}
