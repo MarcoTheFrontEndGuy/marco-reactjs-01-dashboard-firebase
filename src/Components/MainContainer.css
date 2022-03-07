@@ -105,7 +105,6 @@
    max-width: 260px;
    padding-bottom: 20px;
    margin: 15px 10px;
-   flex: 1 1 30%;
 }
 
 .mainContainer .left .cards main .card_main img {
@@ -183,13 +182,154 @@
    transition: all 0.3s cubic-bezier(0.17, 0.81, 0.38, 1.39);
 }
 
-.mainContainer .right .topCard {
+.mainContainer .right .topCard, 
+.mainContainer .right .bottomRightCard {
    background-color: #19162c;
+   border-radius: 0.5em;
+   box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+   padding: 10px 20px;
+}
+
+.mainContainer .right .topCard .topCard_name, 
+.mainContainer .right .bottomRightCard .bottomName {
+   display: flex;
+   justify-content: space-between;
+   align-items: center; 
+}
+
+.mainContainer .right .topCard .topCard_name h2,
+.mainContainer .right .bottomRightCard .bottomName h2 {
+   color: #d1cfd5;
+}
+
+.mainContainer .right .topCard .topCard_name a,
+.mainContainer .right .bottomRightCard .bottomName a {
+   color: #b1147d;
+}
+
+.mainContainer .right .topCard .earning {
+   padding: 5px 10px;
+}
+
+.mainContainer .right .topCard .earning p {
+   margin: 8px 0;
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 12px;
+   font-weight: bold;
+   color: #adabb8;
+}
+
+.mainContainer .right .topCard .earning p:nth-child(odd) {
+   background: #211d3a;
    border-radius: 0.5em;
    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
 }
 
-.mainContainer .right .topCard .topCard_name {
+.mainContainer .right .topCard .earning p span {
+   font-size: 14px;
+   color: #b1147d;
+}
+
+.mainContainer .right .bottomRightCard {
+   margin-top: 15px;
+}
+
+.mainContainer .right .bottomRightCard .topSeller {
    display: flex;
-   justify-content: space-between;
+   align-items: center;
+   margin: 10px 0;
+}
+
+.mainContainer .right .bottomRightCard .topSeller .topSellerImg {
+   width: 45px;
+   height: 45px;
+   background: #252041;
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+.mainContainer .right .bottomRightCard .topSeller .topSellerImg img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.mainContainer .right .bottomRightCard .topSeller .topSellerName {
+   font-size: 14px;
+   color: #adabb8;
+   font-weight: bold;
+   margin-left: 10px;
+}
+
+.mainContainer .right .bottomRightCard .topSeller .topSellerName span {
+   display: block;
+   font-size: 12px;
+}
+
+.mainContainer .right .bottomRightCard .topSeller .btn {
+   font-size: 10px;
+   margin-left: auto;
+}
+
+@media screen and (max-width: 525px ) {
+   .mainContainer {
+      flex-direction: column;
+      height: auto;
+   }
+   .mainContainer .left {
+      width: 100%;
+   }
+
+   .mainContainer .left .banner .textContainer h1 {
+      font-size: 2.5em;
+   }
+   .mainContainer .left .banner .textContainer h2 {
+      font-size: 1.75em;
+   }
+
+   .mainContainer .left .cards .filters .filter_buttons {
+      display: none;
+   }
+
+   .mainContainer .left .cards main .card_main {
+      max-width: 350px;
+      /* display: none; */
+   }
+   
+   .mainContainer .right {
+      width: 100%;
+      padding: unset;
+      margin-top: 20px;
+   }
+}
+
+@media screen and (min-width: 525px) and (max-width: 950px) {
+   .mainContainer {
+      height: calc(100% - 25px);
+   }
+
+   .mainContainer .left {
+      width: 60%;
+   }
+   .mainContainer .right {
+      width: 40%;
+   }
+
+   .mainContainer .left .cards main .card_main {
+      max-width: 230px;
+      margin: 20px 5px;
+   }
+   .mainContainer .left .cards .filters {
+      padding: 0;
+   }
+   .mainContainer .right .topCard .earning {
+      padding: 0;
+   }
+   .mainContainer .right .bottomRightCard .topSeller .topSellerImg {
+      width: 30px;
+      height: 30px;
+   }
 }
