@@ -4,4 +4,15 @@
   background-color: #121026;
   overflow: hidden;
   display: flex;
+  box-sizing: border-box;
+}
+
+.App::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 525px) {
+  .App {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
